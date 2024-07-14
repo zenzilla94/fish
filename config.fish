@@ -7,6 +7,9 @@ end
 # Created by `pipx` on 2024-04-27 02:35:12
 set PATH $PATH /home/mike/.local/bin /usr/bin /usr/local/bin /usr/local/sbin /home/mike/.local/share/nvim/mason/bin /home/mike/.local/share/nvim/mason/packages/python-lsp-server/venv/bin
 
+# Nix Path
+set NIX_PATH /home/mike/dotfiles/nixos/configuration.nix
+
 # Abbreviations
 
 # List Directory Contents
@@ -22,11 +25,19 @@ abbr --add mv "mv -iv"
 abbr --add rm "rm -i"
 abbr --add mkdir "mkdir -pv"
 
+# Locate
+abbr --add locate "sudo plocate"
+
 # Networking
 abbr --add ping "ping -c 5"
 
 # Pacman
-abbr --add pac "sudo pacman"
+# abbr --add pac "sudo pacman"
+
+# Nix
+abbr --add nc "sudo nix run ~/dotfiles/nixvim /home/mike/dotfiles/nixos/configuration.nix"
+abbr --add nr "sudo nixos-rebuild switch --flake /home/mike/dotfiles/nixos"
+abbr --add nv "nix run ~/dotfiles/nixvim"
 
 # Quick Access
 abbr --add c "clear"
@@ -43,6 +54,7 @@ abbr --add gco "git checkout"
 abbr --add vim "nvim"
 abbr --add vi "nvim"
 abbr --add v "nvim"
+# abbr --add nv "nix run 'github:elythh/nixvim'"
 
 # SSH
 abbr --add prawn "ssh prawn@chappie"
@@ -55,4 +67,6 @@ abbr --add d "deactivate"
 abbr --add dcd "deactivate | cd"
 
 # Project Directories
-abbr --add z "cd ~/Projects/Zealot/Zealot | source ../venv/bin/activate.fish"
+abbr --add zz "cd ~/Projects/Zealot/Zealot | source ../venv/bin/activate.fish"
+
+zoxide init fish | source
