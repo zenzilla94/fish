@@ -49,6 +49,8 @@ abbr --add gp "git pull"
 abbr --add gpush "git push"
 abbr --add --set-cursor gc 'git commit -m "%"'
 abbr --add gco "git checkout"
+abbr --add gd "git diff"
+abbr --add gpa "git push codeberg && git push github"
 
 # Neovim
 abbr --add vim "nvim"
@@ -69,4 +71,5 @@ abbr --add dcd "deactivate | cd"
 # Project Directories
 abbr --add zz "cd ~/Projects/Zealot/Zealot | source ../venv/bin/activate.fish"
 
+thefuck --alias | source
 zoxide init fish | source
