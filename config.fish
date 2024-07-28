@@ -50,7 +50,7 @@ abbr --add gpush "git push"
 abbr --add --set-cursor gc 'git commit -m "%"'
 abbr --add gco "git checkout"
 abbr --add gd "git diff"
-abbr --add gpa "git push codeberg && git push github"
+abbr --add gpa "git push codeberg main && git push github main"
 
 # Neovim
 abbr --add vim "nvim"
