@@ -69,7 +69,12 @@ abbr --add d "deactivate"
 abbr --add dcd "deactivate | cd"
 
 # Project Directories
-abbr --add zz "cd ~/Projects/Zealot/Zealot | source ../venv/bin/activate.fish"
-
+abbr --add zz "cd ~/Projects/Zealot; nix-shell --run 'cd ~/Projects/Zealot/Zealot; exec fish'"
 thefuck --alias | source
 zoxide init fish | source
+
+# Parent Directories
+
+abbr --add ... "cd .. | cd .."
+abbr --add .... "cd .. | cd .. | cd .."
+abbr --add ..... "cd .. | cd .. | cd .. | cd .."
