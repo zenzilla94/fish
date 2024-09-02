@@ -20,9 +20,9 @@ abbr --add la "ls -a"
 abbr --add cat "bat"
 
 # File & Directory Operations
-abbr --add cp "cp -iv"
-abbr --add mv "mv -iv"
-abbr --add rm "rm -i"
+abbr --add cp "cp -v"
+abbr --add mv "mv -v"
+abbr --add --set-cursor rm "rm -%"
 abbr --add mkdir "mkdir -pv"
 
 # Locate
