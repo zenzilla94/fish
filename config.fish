@@ -35,9 +35,8 @@ abbr --add ping "ping -c 5"
 # abbr --add pac "sudo pacman"
 
 # Nix
-abbr --add nc "sudo nix run ~/dotfiles/nixvim /home/mike/dotfiles/nixos/configuration.nix"
+# abbr --add nc "sudo nix run ~/dotfiles/nixvim /home/mike/dotfiles/nixos/configuration.nix"
 abbr --add nr "sudo nixos-rebuild switch --flake /home/mike/dotfiles/nixos"
-abbr --add nv "nix run ~/dotfiles/nixvim"
 
 # Quick Access
 abbr --add c "clear"
@@ -52,11 +51,17 @@ abbr --add gco "git checkout"
 abbr --add gd "git diff"
 abbr --add gpa "git push codeberg main && git push github main"
 
+# Lazygit
+abbr --add lg "lazygit"
+
 # Neovim
-abbr --add vim "nvim"
-abbr --add vi "nvim"
+abbr --add nv "nvim ."
 abbr --add v "nvim"
-# abbr --add nv "nix run 'github:elythh/nixvim'"
+abbr --add vi "nvim"
+abbr --add vim "nvim"
+
+# NixVim
+abbr --add nxv "nix run ~/dotfiles/nixvim"
 
 # SSH
 abbr --add prawn "ssh prawn@chappie"
@@ -74,7 +79,11 @@ thefuck --alias | source
 zoxide init fish | source
 
 # Parent Directories
-
+abbr --add - "cd .."
 abbr --add ... "cd .. | cd .."
 abbr --add .... "cd .. | cd .. | cd .."
 abbr --add ..... "cd .. | cd .. | cd .. | cd .."
+
+# Create custom keybinding to enable "-" to function as "cd .."
+# This works, but now I can't use hyphens for setting options
+# bind -M insert "-" 'commandline -r "cd .."; commandline -f execute'
