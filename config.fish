@@ -56,9 +56,7 @@ abbr --add lg "lazygit"
 
 # Neovim
 abbr --add nv "nvim ."
-abbr --add v "nvim"
-abbr --add vi "nvim"
-abbr --add vim "nvim"
+abbr --add ns "nvim -S Session.vim"
 
 # NixVim
 abbr --add nxv "nix run ~/dotfiles/nixvim"
@@ -83,6 +81,9 @@ abbr --add - "cd .."
 abbr --add ... "cd .. | cd .."
 abbr --add .... "cd .. | cd .. | cd .."
 abbr --add ..... "cd .. | cd .. | cd .. | cd .."
+
+# Starship
+starship init fish | source
 
 # Create custom keybinding to enable "-" to function as "cd .."
 # This works, but now I can't use hyphens for setting options
