@@ -1,8 +1,22 @@
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                       config.fish                        ║
+#          ╚══════════════════════════════════════════════════════════╝
+
+
+# ══ TODO: ═════════════════════════════════════════════════════════════
+#
+# - [x] Remove "Welcome to fish" message
+
+
+
 if status is-interactive
 	fish_vi_key_bindings
 	atuin init fish | source
     # Commands to run in interactive sessions can go here
 end
+
+# Remove the welcome message
+set fish_greeting ""
 
 # Created by `pipx` on 2024-04-27 02:35:12
 set PATH $PATH /home/mike/.local/bin /usr/bin /usr/local/bin /usr/local/sbin /home/mike/.local/share/nvim/mason/bin /home/mike/.local/share/nvim/mason/packages/python-lsp-server/venv/bin
