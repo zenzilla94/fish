@@ -6,6 +6,7 @@
 # ══ TODO: ═════════════════════════════════════════════════════════════
 #
 # - [x] Remove "Welcome to fish" message
+# - [ ] add kanagawa theme
 
 
 
