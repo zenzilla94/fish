@@ -15,6 +15,26 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+
+# ══ Variables: ═
+
+# Set the default editor
+set -x EDITOR nvim
+
+set -x VISUAL nvim
+
+set -x BROWSER zen-browser
+
+set -x TERMINAL kitty
+
+set -x SHELL /home/mike/.nix-profile/bin/fish
+
+
+set -x HOME /home/mike
+# set config home
+set -x XDG_CONFIG_HOME $HOME/.config
+
+
 # Remove the welcome message
 set fish_greeting ""
 
@@ -82,8 +102,11 @@ abbr --add toad "ssh toad@archlinux"
 
 # Python & Virtual Environments
 abbr --add p "python"
+abbr --add pm "python main.py"
 abbr --add d "deactivate"
-abbr --add dcd "deactivate | cd"
+
+# Poetry shell environment that works with vim-tmux-navigator
+abbr --add ev "source (poetry env info --path)/bin/activate.fish" # haakenlid
 
 # Project Directories
 abbr --add zz "cd ~/Projects/Zealot; nix-shell --run 'cd ~/Projects/Zealot/Zealot; exec fish'"
