@@ -63,6 +63,9 @@ abbr --add mkdir "mkdir -pv"
 # Locate
 abbr --add locate "sudo plocate"
 
+# Streamrip
+abbr --add --set-cursor tfetch "rip search tidal album '%'"
+
 # Networking
 abbr --add ping "ping -c 5"
 
@@ -70,8 +73,11 @@ abbr --add ping "ping -c 5"
 # abbr --add pac "sudo pacman"
 
 # Nix
-# abbr --add nc "sudo nix run ~/dotfiles/nixvim /home/mike/dotfiles/nixos/configuration.nix"
-abbr --add nr "sudo nixos-rebuild switch --flake /home/mike/dotfiles/nixos"
+abbr --add nr "sudo nixos-rebuild switch --flake .#zenbook"
+abbr --add hm "home-manager switch --flake .#mike@zenbook"
+
+# run nix code from default.nix
+abbr --add ni "nix-instantiate --eval --strict"
 
 # Quick Access
 abbr --add c "clear"
