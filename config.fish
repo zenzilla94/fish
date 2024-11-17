@@ -28,7 +28,7 @@ set -x BROWSER zen-browser
 
 set -x TERMINAL kitty
 
-set -x SHELL /home/mike/.nix-profile/bin/fish
+set -x SHELL /etc/profiles/per-user/mike/bin/fish
 
 
 set -x HOME /home/mike
