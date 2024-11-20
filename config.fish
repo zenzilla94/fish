@@ -28,7 +28,7 @@ set -x BROWSER zen-browser
 
 set -x TERMINAL kitty
 
-set -x SHELL /etc/profiles/per-user/mike/bin/fish
+set -x SHELL /home/mike/.nix-profile/bin/fish
 
 
 set -x HOME /home/mike
@@ -63,8 +63,6 @@ abbr --add mkdir "mkdir -pv"
 # Locate
 abbr --add locate "sudo plocate"
 
-# Streamrip
-abbr --add --set-cursor tfetch "rip search tidal album '%'"
 
 # Networking
 abbr --add ping "ping -c 5"
@@ -125,6 +123,12 @@ abbr --add - "cd .."
 abbr --add ... "cd .. | cd .."
 abbr --add .... "cd .. | cd .. | cd .."
 abbr --add ..... "cd .. | cd .. | cd .. | cd .."
+
+# Streamrip
+abbr --add --set-cursor fetch "rip search qobuz album '%'"
+abbr --add --set-cursor tfetch "rip search tidal album '%'"
+abbr --add --set-cursor fetchndb "rip -ndb search qobuz album '%'"
+abbr --add --set-cursor tfetchndb "rip -ndb search tidal album '%'"
 
 # Starship
 starship init fish | source
